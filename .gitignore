@@ -67,3 +67,22 @@ __pycache__/
 # 系统
 .DS_Store
 Thumbs.db
+
+# 历史迁移/一次性脚本（开发期产物，1.0 无旧用户需升级；本地保留）
+scripts/migrate-applicability.mjs
+scripts/migrate-auth.mjs
+scripts/migrate-config-bilingual.mjs
+scripts/migrate-config-hidden.mjs
+scripts/migrate-field-options.mjs
+scripts/migrate-i18n.mjs
+scripts/migrate-permission.mjs
+scripts/migrate-reasoning.mjs
+scripts/migrate-security-entry.mjs
+scripts/migrate-timestamps.mjs
+scripts/migrate-timezone.mjs
+scripts/migrate-user-import.mjs
+scripts/backfill-md-html.py
+scripts/fix-html-tables.py
+scripts/i18n-error-codemod.mjs
+scripts/ingest-sync.mjs
+scripts/index-sync.mjs
