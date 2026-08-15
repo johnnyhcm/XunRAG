@@ -1,0 +1,31 @@
+{
+  "name": "policybot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "企业政策 AI — monorepo 根",
+  "type": "module",
+  "workspaces": [
+    "app/backend",
+    "app/frontend",
+    "app/shared"
+  ],
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "dev:backend": "npm -w @policybot/backend run dev",
+    "dev:frontend": "npm -w @policybot/frontend run dev",
+    "build": "npm -w @policybot/shared run build && npm -w @policybot/backend run build && npm -w @policybot/frontend run build",
+    "test:s1": "node app/tests/s1.smoke.mjs",
+    "test:s2": "node app/tests/s2.flow.mjs",
+    "test:s3": "node app/tests/s3.eval.mjs",
+    "test:s8": "cd app/backend && npx tsx ../tests/s8.reasoning.test.mjs",
+    "ingest:sync": "node scripts/ingest-sync.mjs",
+    "init": "npx tsx scripts/init.mjs",
+    "setup": "npx tsx scripts/setup.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

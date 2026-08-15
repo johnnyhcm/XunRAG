@@ -1,0 +1,14 @@
+# Python 服务依赖（S2 起即安装；S3 补检索栈）
+# S2：fastapi/uvicorn/pypandoc/pydantic/Pillow
+# S3：sentence-transformers/chromadb/rank-bm25/jieba
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pypandoc>=1.15
+pydantic>=2.10.0
+Pillow>=11.0.0
+
+# === S3 检索栈 ===
+sentence-transformers>=3.3.0
+chromadb>=0.5.20
+rank-bm25>=0.2.2
+jieba>=0.42.1

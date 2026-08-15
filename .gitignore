@@ -1,0 +1,69 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+build/
+*.tsbuildinfo
+
+# 运行数据（数据库/向量库/上传/日志/证书/备份/会话）
+data/
+!data/.gitkeep
+
+# 模型文件（大文件，不提交；tools/download_models.py 负责下载）
+models/embedding/*
+models/reranker/*
+models/llm/*
+!models/embedding/.gitkeep
+!models/reranker/.gitkeep
+!models/llm/.gitkeep
+
+# 本地大模型运行库（1.7G 二进制，不提交）
+tools/llama.cpp/
+
+# NSSM 完整包源码（只需 tools/nssm/nssm.exe 供服务脚本使用）
+tools/nssm/extracted/
+
+# 一次性技术验证产物（含真实样例数据，不公开）
+spike/
+
+# 自动化测试脚本（不随源码分发）
+app/tests/
+
+# 前端 SSR 冒烟测试
+app/frontend/ssrtest/
+
+# 内部工程文档（人机协作产物，不公开；软著/商业秘密材料）
+PRD.md
+TECH.md
+DISSCUSION.md
+ISSUE_LOG.md
+AGENTS.md
+docs/setup.md
+docs/testing.md
+docs/security-review.md
+
+# QA 评测脚本（测试类）
+scripts/qa-eval-20260813.mjs
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 日志
+*.log
+
+# 环境与密钥
+.env
+.env.local
+.env.production
+*.key
+*.pem
+
+# 编辑器
+.vscode/
+.idea/
+
+# 系统
+.DS_Store
+Thumbs.db
